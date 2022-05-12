@@ -28,3 +28,12 @@ export const createGame = (game) => {
     return fetch('http://localhost:8000/games', requestOptions)
         .then(response => response.json())
 }
+
+export const getReviews = () => {
+    return fetch("http://localhost:8000/reviews", {
+        headers: {
+            "Authorization": `Token ${localStorage.getItem("lu_token")}`
+        }
+    })
+        .then(response => response.json())
+}
