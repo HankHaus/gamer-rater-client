@@ -57,6 +57,11 @@ export const GameDetails = (props) => {
             <h1>Categories: {game.categories?.map(c => {
                 return c.label
             })}</h1>
+            <button className="btn btn-2 btn-sep icon-create"
+                onClick={() => {
+                    history.push({ pathname: `/games/edit/${gameId}` })
+                }}
+            >Edit Game</button>
             <br></br>
             <h1>Reviews</h1>
             {
